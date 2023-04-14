@@ -16,21 +16,19 @@ public class TreeController {
     }
 
     @GetMapping("/tree/{id}")
-
     public FruitTree get(@RequestParam int id) {
         return treeService.getTree(id);
         
     }
     @PostMapping("/tree/add")
-
-    public void  put(@RequestBody FruitTree tree) {
-        treeService.addTree(tree);
+    public FruitTree put(@RequestBody FruitTree tree) {
+        return  treeService.addTree(tree);
 
     }
 
     @PostMapping("/tree/update")
-    public void update(@RequestBody FruitTree tree) {
-     treeService.updateTree(tree);
+    public FruitTree update(@RequestBody FruitTree tree) {
+    return treeService.updateTree(tree);
     }
 
     @DeleteMapping("/tree/delete")
