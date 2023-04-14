@@ -13,6 +13,7 @@ public class TreeService {
     }
 
     public FruitTree getTree(int id){
+
         FruitTree tree=treeRepository.getOne(id);
         return tree;
     }
